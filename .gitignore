@@ -1,0 +1,9 @@
+.env
+
+backend/logs
+backend/__pycache__
+backend/jrrpUserConsent.db
+backend/main_botluo.py
+
+napcat/config
+napcat/audios
