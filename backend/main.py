@@ -44,6 +44,11 @@ ADMIN_QID = int(os.environ.get("ADMIN_QID", 10000))  # 默认值，可通过环�
 
 BOT_NAME = os.environ.get("BOT_NAME", "Robot")  # 默认值，可通过环境变量 BOT_NAME 修改
 
+HTTP_PORT = int(os.environ.get("HTTP_PORT", 8080))  # 默认值，可通过环境变量 HTTP_PORT 修改
+HTTP_HOST = os.environ.get("HTTP_HOST", "0.0.0.0")  # 默认值，可通过环境变量 HTTP_HOST 修改
+
+
+
 app = Flask(__name__)
 
 def get_bot_qid():
@@ -322,4 +327,4 @@ def receive_json():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080, debug=True)
+    app.run(host=HTTP_HOST, port=HTTP_PORT, debug=True)

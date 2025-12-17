@@ -1,6 +1,6 @@
 FROM python:3.10-slim
 
-WORKDIR /app
+WORKDIR /app/backend
 
 # 复制所有项目文件到工作目录
 COPY ./backend .

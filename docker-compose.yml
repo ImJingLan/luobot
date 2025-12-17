@@ -21,7 +21,8 @@ services:
         container_name: chatbot_1
         build: .
         volumes:
-          - ./backend:/app # 持续化后端代码目录
+          - ./backend:/app/backend # 持续化后端代码目录
+          - ./env:/app/env # 持续化环境变量目录
         ports:
           - "8080:8080"
         restart: unless-stopped
@@ -29,7 +30,6 @@ services:
           - PYTHONUNBUFFERED=1
         networks:
             - napcatnet
-        command: python main.py
 
 networks:
     napcatnet:
